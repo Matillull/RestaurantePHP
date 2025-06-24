@@ -28,6 +28,21 @@
 2. Asegurate de que Apache esté corriendo en XAMPP.
 3. Abrí tu navegador y entrá a: http://localhost:8080/restaurante
 4. Deberías ver la salida generada por `index.php`.
-
-
-  
+5. Editar el archivo httpd-vhosts.conf, en la carpeta donde inslalo XAMPP, ejemplo: C:\xampp\apache\conf\extra
+6. Agregar las siguientes lineas:
+<VirtualHost *:8080>
+    ServerName localhost
+    DocumentRoot "Ubicacion de la carpeta del proyecto, D:/PHP/obligatorioPHP"
+    <Directory "Ubicacion de la carpeta del proyecto, ejemplo: D:/PHP/obligatorioPHP">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+7. En el navegador ir a http://localhost:8080/phpmyadmin/index.php?route=/table/sql&db=restaurante&table=menu
+8. En la Pestaña Base de datos:
+- colocar el nombre de la base de datos
+- en el comboBox siguiente seleccionar: utf8mb4_general_ci
+- luego hacer clic en Crear
+9. Ir a la pestaña Importar, luego Seleccionar archivo, aqui es donde va a buscar en el proyecto el archivo.sql 
+10. Ahora si ya podemos ir a http://localhost:8080/restaurante/login.php
