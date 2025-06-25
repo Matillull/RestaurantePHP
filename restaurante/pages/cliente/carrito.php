@@ -19,7 +19,7 @@ $productos = $stmt->fetchAll();
 $total = 0;
 ?>
 
-<div class="container mt-4">
+<div class="container mt-5">
   <h2>Tu carrito</h2>
   <?php foreach ($productos as $item): ?>
     <?php $subtotal = $carrito[$item['id']] * $item['precio']; $total += $subtotal; ?>

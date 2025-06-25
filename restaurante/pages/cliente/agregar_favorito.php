@@ -1,13 +1,11 @@
 <?php
 // Incluir la cabecera y barra de navegación
-include '../../includes/head.php';
+session_start();
 include '../../includes/navbar.php';
 include '../../includes/mensajes.php';
 require '../../database/db.php';
 
-
 // Iniciar la sesión
-session_start();
 
 // Verificar que el usuario sea cliente
 if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'cliente') {

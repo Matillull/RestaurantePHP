@@ -1,6 +1,5 @@
 <?php
 // Incluir la cabecera y barra de navegación
-include '../../includes/head.php';
 include '../../includes/navbar.php';
 include '../../includes/mensajes.php';
 require '../../database/db.php';

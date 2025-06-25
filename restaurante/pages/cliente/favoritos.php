@@ -1,10 +1,10 @@
 <?php
-include '../../includes/head.php';
+session_start();
 include '../../includes/navbar.php';
 include '../../includes/mensajes.php';
 require '../../database/db.php';
 
-session_start();
+
 
 if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'cliente') {
     header("Location: ../../login.php");
