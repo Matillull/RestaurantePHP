@@ -28,7 +28,7 @@
 2. Asegurate de que Apache esté corriendo en XAMPP.
 3. Abrí tu navegador y entrá a: http://localhost:8080/restaurante
 4. Deberías ver la salida generada por `index.php`.
-5. Editar el archivo httpd-vhosts.conf, en la carpeta donde inslalo XAMPP, ejemplo: C:\xampp\apache\conf\extra
+5. Editar el archivo httpd-vhosts.conf, en la carpeta donde instalo XAMPP, ejemplo: C:\xampp\apache\conf\extra
 6. Agregar las siguientes lineas:
 <VirtualHost *:8080>
     ServerName localhost
@@ -46,3 +46,8 @@
 - luego hacer clic en Crear
 9. Ir a la pestaña Importar, luego Seleccionar archivo, aqui es donde va a buscar en el proyecto el archivo.sql 
 10. Ahora si ya podemos ir a http://localhost:8080/restaurante/login.php
+
+11. Paso Alternativo para correr la aplicacion:
+-En caso de no poder Importar la base de datos de forma completa(provocando que no puedas registrar el Usuario).
+-Se debera crear una nueva base de datos  acorde a la estructura de archivos del proyecto y luego se la copia a la carpeta donde se instalo el proyecto en XAMPP,ejemplo: C:\xampp\htdocs\restaurante\database
+-Ahora es posible registrar un usuario para poder seguir navegando en la pagina.
